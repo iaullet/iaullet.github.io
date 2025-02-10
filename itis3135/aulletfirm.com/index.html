@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Aullet Firm Home</title>
+		<!-- https://coolors.co/1c1d21-a288a6-bb9bb0-ccbcbc-f1e3e4 -->
+		<style type="text/css">
+			body{
+				background-color: #FFEBE7;
+				color: #1C1D21;
+				margin:0;
+				padding:0;
+                text-align:center;
+                min-height: 100vh;
+				width: 100%;
+                display: flex;
+                justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+			}
+
+			header{
+				width: 100%;
+				height: 50px;
+				display:flex;
+				justify-content: left;
+				align-items: center;
+				flex-direction: row;
+				top: 0;
+				border-bottom: 1px solid #8A7090;;
+				max-width: 100%;
+			}
+
+			#logo {
+				height:45px;
+				width: 45px;
+				margin-left: 0;
+			}
+
+			h1{
+				text-align: center;
+				margin:0;
+				font-size: medium;
+			}
+
+			h2{
+				color: #8D3B72;
+			}
+
+			h3{
+				margin-bottom: 0;
+				color: #CCBCBC;
+				
+			}
+
+			.container{
+				display: flex;
+				box-sizing: border-box;
+				justify-content: center;
+				flex-wrap: wrap;
+				max-width: 100vw;
+				margin:0;
+				margin-top: 20px;
+			}
+
+			.square{
+				aspect-ratio: 1/1;
+				width:50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				overflow: hidden;
+				flex-direction: column;
+			}
+
+			.things{
+				color: #8D3B72;
+			}
+
+			.content{
+				color: #1C1D21;
+				padding:20px;
+				font-size: 0.9em;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+			}
+
+			.content li{
+				text-align: left;
+				list-style: decimal;
+				padding: 0 12px;
+				flex-wrap: wrap;
+				line-height: 1.5;
+			}
+
+			.square img{
+				max-width: 90%;
+            	height: auto;
+			}
+			.para{
+				background-color: #8A7090;
+			}
+			
+			footer{
+				max-width: 100%;
+                margin-top:auto;
+			}
+			.contact{
+				text-align: left;
+				margin: 10px 0 0 10px;
+				line-height: 1.6;
+			}
+			@media (max-width: 768px) {
+            .full-width {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .content-left, .content-right {
+                text-align: center;
+                width: 100%;
+            }
+
+            .full-width img {
+                width: 100%;
+            }
+        }
+		</style>
+	</head>
+	<body>
+		<header>
+			<img src="images/B.png" alt="logo" id="logo">
+			<h1>Aullet Firm</h1>
+		</header>
+		<main>
+			<h2>Aullet Firm's Services</h2>
+			<p>Aullet Firm  is a cutting-edge website design firm dedicated to transforming ideas into visually stunning and highly functional digital experiences. Specializing in sleek, modern designs and intuitive user interfaces, the company works with businesses of all sizes to create websites that not only capture attention but also drive engagement.</p>
+			<section class="container">
+				<section class="square">
+					<h3 class="things">5 Amazing Things About Us</h3>
+					<ul class="content">
+						<li>User-Centered Approach</li>
+						<li>Fast & Responsive Websites</li>
+						<li>Custom, Eye-Catching Designs</li>
+						<li>Passion for Innovation</li>
+						<li>Client-Centric Process</li>
+					</ul>
+				</section>
+				<section class="square">
+					<img src="images/sunset.png">
+				</section>
+				<section class="square para">
+					<h3>Contact Us</h3>
+					<p class="contact">Phone: (555) 987-6543<br>
+					Email: aulletfirm@gmail.com<br>
+					Address: 23 Innovation Way, Suite 500, San Francisco, CA 94107</p>
+				</section>
+				<section class="square para">
+					<h3>What We Do For You</h3>
+					<p class="content">At Aullet Firm, our mission is to bring your vision to life with a stunning, high-performing website that sets you apart from the competition. Whether you're a small business looking for a sleek online presence, an entrepreneur launching an e-commerce store, or a corporation in need of a modern redesign, we’re here to make it happen. Our team works closely with you to understand your goals, ensuring a website that is not only beautiful but also functional and effective. Let’s create something amazing together—reach out today and let’s get started!</p>
+				</section>
+			</section>
+		</main>
+		<footer>
+			<p>Page Created by Aullet Firm ©2025</p>
+		</footer>
+	</body>
+</html>
