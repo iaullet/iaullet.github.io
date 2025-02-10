@@ -18,7 +18,7 @@
                 justify-content: center;
 				align-items: center;
 				flex-direction: column;
-				font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+				font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 			}
 
 			header{
@@ -42,17 +42,27 @@
 			h1{
 				text-align: center;
 				margin:0;
-				font-size: xx-large;
+				font-size: clamp(1.5rem, 4vw, 3rem);
 			}
 
 			h2{
 				color: #8D3B72;
+				font-size: clamp(1.2rem, 3vw, 2.5rem);
 			}
 
 			h3{
 				margin-bottom: 0;
 				color: #CCBCBC;
+				font-size: clamp(1rem, 2.5vw, 2rem);
 				
+			}
+			p, li{
+				font-size: clamp(0.9rem, 2vw, 1.5rem);
+    			line-height: 1.6;
+			}
+
+			.top{
+				padding: 0 5%;
 			}
 
 			.container{
@@ -74,6 +84,7 @@
 				position: relative;
 				overflow: hidden;
 				flex-direction: column;
+				min-height: 200px;
 			}
 
 			.things{
@@ -86,6 +97,9 @@
 				display: flex;
 				justify-content: center;
 				flex-direction: column;
+				word-wrap: break-word;
+				flex-grow: 1;
+				max-width: 100%;
 			}
 
 			.content li{
@@ -102,7 +116,8 @@
 			}
 			.para{
 				background-color: #8A7090;
-			}
+				flex-grow: 1;
+				}
 			
 			footer{
 				max-width: 100%;
@@ -137,8 +152,10 @@
 			<h1>Aullet Firm</h1>
 		</header>
 		<main>
+			<section class="top">
 			<h2>Aullet Firm's Services</h2>
 			<p>Aullet Firm  is a cutting-edge website design firm dedicated to transforming ideas into visually stunning and highly functional digital experiences. Specializing in sleek, modern designs and intuitive user interfaces, the company works with businesses of all sizes to create websites that not only capture attention but also drive engagement.</p>
+			</section>
 			<section class="container">
 				<section class="square">
 					<h3 class="things">5 Amazing Things About Us</h3>
@@ -161,7 +178,7 @@
 				</section>
 				<section class="square para">
 					<h3>What We Do For You</h3>
-					<p class="content">At Aullet Firm, our mission is to bring your vision to life with a stunning, high-performing website that sets you apart from the competition. Whether you're a small business looking for a sleek online presence, an entrepreneur launching an e-commerce store, or a corporation in need of a modern redesign, we’re here to make it happen. Our team works closely with you to understand your goals, ensuring a website that is not only beautiful but also functional and effective. Let’s create something amazing together—reach out today and let’s get started!</p>
+					<p class="content">At Aullet Firm, our mission is to bring your vision to life with a stunning, high-performing website that sets you apart from the competition. Whether you're a small business looking for a sleek online presence, an entrepreneur launching an e-commerce store, or a corporation in need of a modern redesign, we’re here to make it happen. Let’s create something amazing together—reach out today and let’s get started!</p>
 				</section>
 			</section>
 		</main>
