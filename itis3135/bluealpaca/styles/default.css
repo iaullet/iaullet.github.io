@@ -1,0 +1,142 @@
+body{
+    background-color: #FDF6EC;
+    color: #333;
+    margin:0;
+    padding:0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color:#A7D8F0;
+    color:#9C7A63;
+    width:100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0;
+}
+
+h1{
+    color:#9C7A63;
+    font-size: min(4vw, 30px);
+    text-align: left;
+    margin-left: 10px;
+    padding:0;
+}
+
+nav{
+    margin:0;
+}
+
+nav ul{
+    height: 100%;
+    list-style:none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin:0;
+}
+
+nav a {
+    color: #9C7A63;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin:0;
+}
+
+nav a:hover {
+    background-color: #F4C2C2;
+    color: #13293D;
+    height: 100%;
+    margin:0;
+}
+
+nav a.active {
+    background-color: #E8F1F2;
+    color: #13293D;
+}
+
+main{
+    display: flex;
+    align-items: stretch;
+    margin: auto 0;
+}   
+
+.about{
+    color:#A7D8F0;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    margin: 0;
+}
+
+.about-img{
+    width:50%;
+    margin: 0;
+}
+.about-img img{
+    width:100%;
+    margin:0;
+}
+
+.about-des{
+    width:50%;
+    margin: 10px;
+}
+
+.about-des p {
+    font-size: small;
+    color:#9C7A63;
+}
+
+h2{
+    margin: 0;
+    text-align: left;
+}
+
+h3{
+    color:#9C7A63;
+    text-align: left;
+    margin: 0;
+    font-weight: lighter;
+    margin-bottom:0;
+}
+
+h4{
+    text-align: left;
+    font-weight: normal;
+    font-size: small;
+    margin-top:0;
+    color:#9C7A63;
+}
+
+footer>section{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+footer>p{	
+    display: flex;
+    justify-content: right;
+    color:#76A89E;
+    font-size: smaller;
+    text-align: right;
+    margin-left: auto;
+}
+footer{
+    display: flex;
+    background-color: #A7D8F0;
+    color:#9C7A63;
+    padding:10px 0 10px 0;
+    margin-top:auto;
+}
+     
