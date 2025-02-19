@@ -54,7 +54,7 @@ background-color: #E8F1F2;
 color: #13293D;
 }
 
-header>nav a.active {
+header>nav .active {
 background-color: #E8F1F2;
 color: #13293D;
 }
@@ -70,7 +70,7 @@ a{
     color:#EDF4F2;
 }
 img{
-    width: 60%;
+    width: 50%;
 }
 figure{
     text-align: center;
