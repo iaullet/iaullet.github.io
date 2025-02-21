@@ -1,0 +1,30 @@
+body{
+    background-color: white;
+    color: black;
+    font-family: 'papyrus';
+}
+ul{
+    text-align: center;
+    list-style-position: inside;
+}
+p{
+    text-align: center;
+    border-top: 200px solid saddlebrown;
+    border-bottom: 30px solid sandybrown;
+    border-left: 50px dashed goldenrod;
+    border-right: 10px dashed black;
+}
+section{
+    margin: 10px 60px 10px 32px;
+}
+img{
+    margin: 70px 20px 10px 200px;
+}
+h2, h3{
+    background-color: aqua;
+    color: azure;
+}
+h1{
+    background-color: yellow;
+    color: blanchedalmond;
+}

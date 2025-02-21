@@ -16,6 +16,10 @@ main{
 h1,h2{
     text-align: center;
 }
+.dark-link{
+    color: #13293D;
+    text-decoration: none;
+}
 footer>p{	
     color:#E8F1F2;
 }
@@ -57,6 +61,14 @@ color: #13293D;
 header>nav .active {
 background-color: #E8F1F2;
 color: #13293D;
+}
+header>nav:last-of-type{
+    background-color: #247ba0;
+    height: 5vh;
+    padding:0;
+}
+header>nav:last-of-type>a{
+    font-size: 12px;
 }
 
 p>a{
