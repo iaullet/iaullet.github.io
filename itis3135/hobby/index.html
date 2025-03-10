@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hobby</title>
+        <link rel="icon" href="images/f1icon.png" id="home">
+		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+		<style>
+            main{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background-color: #071010;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin:0;
+                padding:0;
+                color: #d5d5d5;
+            }
+
+            header{
+                height:50%;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/banner.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                color: #d5d5d5;
+                padding-bottom: 10px;
+            }
+            header>img{
+                width: 100%;
+                object-fit: cover;
+                height:50%;
+            }
+            nav ul{
+                height: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                align-items: center;
+                text-decoration: none;
+                list-style: none;
+            }
+
+            ul>li{
+                padding: 15px;
+            }
+            nav li:hover {
+                background-color: #FF1E00;
+                color: #d5d5d5;
+                cursor: pointer;
+            }
+
+            footer{
+                text-align: center;
+            }
+            h1{
+                margin: 0;
+                color: #FF1E00;
+                text-align: center;
+            }
+            h2{
+                color: #880D1E;
+            }
+            a{
+                color: #FF1E00;
+                font-style: italic;
+            }
+
+            section{
+                display: block;
+				flex-grow: 1;
+				max-width: 100%;
+                align-items: center;
+            }
+
+            .home, .seasons, .how, .why{
+                display:inline-flex;
+				padding: 20px;
+				max-width: 100%;
+				margin-top: 5%;
+            }
+             .locations, .teams{
+                display: block;
+				flex-grow: 1;
+				max-width: 100%;
+				max-width: fit-content; 
+                align-items: center;
+            }
+            .locations>section, .teams>section{
+                display:inline-flex;
+				padding: 20px;
+				max-width: 100%;
+				margin-top: 5%;
+            }
+
+            .block{
+                display: block;
+                max-width: 50%;
+            }
+
+            img{
+                object-fit: cover;
+                max-width: 100%;
+                overflow: hidden;
+                height: auto;
+                box-shadow: 0 0 20px 5px #880D1E;
+            }
+            figcaption{
+                text-align: center;
+                font-style: italic;
+            }
+
+            .tables{
+                align-items: center;
+            }
+
+            table{
+                border-collapse:collapse;
+                margin: 10px;
+                width: 100%;
+            }
+
+            tr {
+                border-bottom: 1px solid #d5d5d5;
+                text-align: center;
+                
+            }
+            tr:nth-child(odd) {
+                background-color: #880D1E;
+            }
+
+            th{
+                background-color: #880D1E;
+            }
+
+            th,td{
+                padding: 15px;
+            }
+
+        @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    
+            main {
+                width: 95%;
+                margin: 0 auto;
+                max-width: 1200px;
+                display: block;
+            }
+            table{
+                width: 90%;
+            }
+        }
+
+        @media screen and ( min-width: 601px ) and ( max-width: 980px ){
+            
+            main {
+                width: 95%;
+                margin: 0 auto;
+                max-width: 1200px;
+                display: block;
+            }
+            table{
+                width: 90%;
+            }
+        }
+
+        @media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+            
+            main {
+                width: 95%;
+                margin: 0 auto;
+                max-width: 1200px;
+            }
+            table{
+                width: 100%;
+                overflow-wrap:anywhere;
+            }
+            .home, .seasons, .how, .why, .teams>section, .locations>section, .block{
+                display: block;
+                max-width: 95%;
+            }
+        }
+		</style>
+	</head>
+	<body>
+		<header>
+            <h1>Formula 1</h1>
+            <nav>
+                <ul>
+                    <li id="home-btn">Home</li>
+                    <li id="teams-btn">Teams</li>
+                    <li id="locations-btn">Locations</li>
+                    <li id="seasons-btn">Seasons</li>
+                    <li id="how-btn" >How</li>
+                    <li id="why-btn">Why</li>
+                </ul>
+            </nav>
+		</header>
+		<main>
+            <section class="section home">
+                <section>
+                <h2>Home</h2>
+                <p>Formula One(F1) is the highest class of open-wheeled auto racing defined by the Fédération Internationale de l'Automobile (FIA). The championship seasons cosists of 24 races, known as Grand Prix. These circuits are either purpose-built or created in closed city streets, like in Monaco.</p>
+                <P> There are two forms of winning based on a point system: World Drivers' Championship(WDC) and World Constructor's Championship(WCC). The WCC is determined by the driver with the most points gained in a season, and the WCC is gained by the team with the most points gained in a season. My favorite F1 team is Redbull Racing, and my favorite driver is Max Verstappen, a member of Redbull Racing. </P>
+                </section>
+                <section>
+                <figure>
+                    <img src="images/home.jpg" alt="f1car">
+                    <figcaption>Formula 1 Car</figcaption>
+                </figure>
+                </section>
+            </section>
+            <section class="section teams">
+                <section>
+                    <section class="block">
+                        <h2>Teams</h2>
+                        <p>Formula One is made up of ten different teams, each with two drivers. However, in 2026 an 11th team will be introduced to the grid. Over the years teams have changed but Scuderia Ferrari is the oldest standing team, dating back to F1's first season in 1950.</p>
+                    </section>
+                    <figure class="block">
+                        <img src="images/how.jpg" alt="Two Nissan Drivers">
+                        <figcaption>Teammates preparing to race</figcaption>
+                    </figure>
+            </section>
+            <section class="tables">
+                <table>
+                    <tr>
+                        <th>Team</th>
+                        <th>Base</th>
+                        <th>Drivers</th>
+                        <th>Race Wins</th>
+                        <th>World Constructer's Champshionship (WCC)</th>
+                        <th>World Drivers' Champshionship (WDC)</th>
+                    </tr>
+                    <tr>
+                        <td>BWT Alpine</td>
+                        <td>Enstone, United Kingdom</td>
+                        <td>Pierre Gasly(10), Jack Doohan(7)</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Aston Martin</td>
+                        <td>Silverstone, United Kingdom</td>
+                        <td>Fernando Alonso(14), Lance Stroll(18)</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Scuderia Ferrari</td>
+                        <td>Maranello, Modena, Italy</td>
+                        <td>Charles Leclerc(16), Lewis Hamilton(44)</td>
+                        <td>247</td>
+                        <td>16</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>MoneyGram Haas</td>
+                        <td>Kannapolis, United States</td>
+                        <td>Esteban Ocon(31), Oliver Bearman(87)</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Stack Kick Sauber</td>
+                        <td>Hinwil, Switzerland</td>
+                        <td>Nico Hulkenburg(27), Gabriel Bortoleto(5)</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>McLaren</td>
+                        <td>Woking, United Kingdom</td>
+                        <td>Oscar Piastri(81), Lando Norris(4)</td>
+                        <td>189</td>
+                        <td>9</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Mercedes-AMG PETRONAS</td>
+                        <td>Brackley, United Kingdom</td>
+                        <td>George Russel(63), Andrea Kimi Antonelli(12)</td>
+                        <td>129</td>
+                        <td>8</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>Racing Bulls</td>
+                        <td>Faenza, Italy</td>
+                        <td>Yuki Tsunoda(22), Isack Hadjar(6)</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Red Bull Racing</td>
+                        <td>Milton Keynes, United Kingdom</td>
+                        <td>Max Verstappen(1), Liam Lawson(30)</td>
+                        <td>122</td>
+                        <td>6</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Williams Racing</td>
+                        <td>Grove, United Kingdom</td>
+                        <td>Carlos Sainz(55), Alexander Albon(23)</td>
+                        <td>114</td>
+                        <td>9</td>
+                        <td>7</td>
+                    </tr>
+                </table>
+            </section>
+            </section>
+            <section class="section locations tables">
+                <section>
+                    <section class="block">
+                        <h2>2025 Locations</h2>
+                        <p>In 2025, F1 will host 24 Grand Prix across the world, from March to December. 
+                            The standard Formula 1 weekend sees each event take place over three days, typically Friday, Saturday and Sunday.
+                            Friday traditionally features two 60-minute Free Practice sessions (FP1 and FP2) for teams to set up their cars. 
+                            On Saturday, after a final practice session (FP3), drivers head into a three-stage session called Qualifying. The slowest five drivers from the 18-minute Q1 phase are eliminated from the session, before five more go out after the 15-minute Q2 segment. The final Q3 determines the positions of the top 10 drivers.
+                            Six of the 24 venues are designated F1 Sprint events. The F1 Sprint is a short race. It covers 100km, about one-third of a typical Grand Prix distance, and should last about 30 minutes. This length has been chosen to encourage a race that is dynamic rather than strategic, with no mandatory pit stop.</p>
+                    </section>
+                    <figure class="block">
+                    <img src="images/silverstone.jpg" alt="silverstone circuit">
+                    <figcaption>Silverstone Circuit</figcaption>
+                    </figure>
+                </section>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Country</th>
+                        <th>Venue</th>
+                        <th>Sprint Race(Y/N)</th>
+                    </tr>
+                    <tr>
+                        <td>March 14-16</td>
+                        <td>Australia</td>
+                        <td>Melbourne</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>March 21-23</td>
+                        <td>China</td>
+                        <td>Shanghai</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>April 4-6</td>
+                        <td>Japan</td>
+                        <td>Suzuka</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>April 11-13</td>
+                        <td>Bahrain</td>
+                        <td>Sakhir</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>April 18-20</td>
+                        <td>Saudi Arabia</td>
+                        <td>Jeddah</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>May 2-4</td>
+                        <td>USA</td>
+                        <td>Miami</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>May 16-18</td>
+                        <td>Italy</td>
+                        <td>Imola</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>May 23-25</td>
+                        <td>Monaco</td>
+                        <td>Monaco</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>May 30-June 1</td>
+                        <td>Spain</td>
+                        <td>Barcelona</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>June 13-15</td>
+                        <td>Canada</td>
+                        <td>Montreal</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>June 27-29</td>
+                        <td>Austria</td>
+                        <td>Spielberg</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>July 4-6</td>
+                        <td>United Kingdom</td>
+                        <td>SilverStone</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>July 25-27</td>
+                        <td>Belgium</td>
+                        <td>Spa</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>August 1-3</td>
+                        <td>Hungary</td>
+                        <td>Budapest</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>August 29-31</td>
+                        <td>Netherlands</td>
+                        <td>Zandvoort</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>September 5-7</td>
+                        <td>Italy</td>
+                        <td>Monza</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>September 19-21</td>
+                        <td>Azerbaijan</td>
+                        <td>Baku</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>October 3-5</td>
+                        <td>Singapore</td>
+                        <td>Singapore</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>October 17-19</td>
+                        <td>USA</td>
+                        <td>Austin</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>October 24-26</td>
+                        <td>Mexico</td>
+                        <td>Mexico City</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>November 7-9</td>
+                        <td>Brazil</td>
+                        <td>Sao Paulo</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>November 20-22</td>
+                        <td>USA</td>
+                        <td>Las Vegas</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>November 28-30</td>
+                        <td>Qatar</td>
+                        <td>Lusail</td>
+                        <td>Y</td>
+                    </tr>
+                    <tr>
+                        <td>December 5-7</td>
+                        <td>Abu Dhabi</td>
+                        <td>Yas Marina</td>
+                        <td>N</td>
+                    </tr>
+                </table>
+                <p>The top 10 most popular locations include: Monza, Monaco, Silverstone, Spa, Montreal, Sao Paulo, Budapest Spielberg, Suzuka, and Zandvoort.</p>
+            </section>
+            <section class="section seasons">
+                <section>
+                <h2>Seasons</h2>
+                <p>Each season, drivers compete for the esteemed F1 Drivers' Championship, while the teams fight for the F1 Constructors' Championship and prize money based on their position at the end.</p>
+                <figure>
+                    <img src="images/wwcwinners.jpg" alt="World Drivers' Champions">
+                    <figcaption>World Drivers' Champions</figcaption>
+                </figure>
+                <p>In 2023 and 2024 Max Verstappen of Redbull Racing Team won the WDC bringing his total championship wins to four. He was the youngest driver in F1 history, joining at 17 back in 2015, and has set multiple records:</p>
+                <ul>
+                    <li>Most race wins in one season, 19 in 2023</li>
+                    <li>Most race wins from pole position in one season, 12 in 2023</li>
+                    <li>Most consecutive wins in one season, 10 in 2023</li>
+                    <li>Most championship points scored in one season, 575 in 2023</li>
+                    <li>Most overtakes in one season, over 78 in 2016</li>
+                    <li>Youngest point scorer in F1, age 17 in 2015</li>
+                    <li>Youngest driver to win a Grand Prix, age 18 in 2016</li>
+                    <li>Youngest driver to set the fastest lap, age 18 in 2016</li>
+                </ul>
+                </section>
+            </section>
+            <section class="section how">
+                <section>
+                    <section>
+                <h2>How</h2>
+                <p>Formula 1 is a team sport with a total of 20 drivers and 10 teams. The scoring system awards championship points for the first ten finishers at each Grand Prix, point and positions displayed in the table. There's an additional point available for the driver with the fastest lap of the race (if they finish in the top ten), plus more points available for success in F1 Sprint races. The driver with the most points at the end of the year wins the title. The team with the most points at the end of the year(sum of both teammate's points) win the title. There are no end of season play-offs.</p>
+                    </section>
+                    <table>
+                        <tr>
+                            <th>Position</th>
+                            <th>Points</th>
+                        </tr>
+                        <tr>
+                            <td>1st Place</td>
+                            <td>25 Points</td>
+                        </tr>
+                        <tr>
+                            <td>2nd Place</td>
+                            <td>18 Points</td>
+                        </tr>
+                        <tr>
+                            <td>3rd Place</td>
+                            <td>15 Points</td>
+                        </tr>
+                        <tr>
+                            <td>4th Place</td>
+                            <td>12 Points</td>
+                        </tr>
+                        <tr>
+                            <td>5th Place</td>
+                            <td>10 Points</td>
+                        </tr>
+                        <tr>
+                            <td>6th Place</td>
+                            <td>8 Points</td>
+                        </tr>
+                        <tr>
+                            <td>7th Place</td>
+                            <td>6 Points</td>
+                        </tr>
+                        <tr>
+                            <td>8th Place</td>
+                            <td>4 Points</td>
+                        </tr>
+                        <tr>
+                            <td>9th Place</td>
+                            <td>2 Points</td>
+                        </tr>
+                        <tr>
+                            <td>10th Place</td>
+                            <td>1 Point</td>
+                        </tr>
+                    </table>
+                </section>
+                <figure>
+                    <img src="images/teams.jpg" alt="redbull helmet">
+                    <figcaption>Max Verstappen of Redbull Racing Team helmet</figcaption>
+                </figure>
+            </section>
+            <section class="section why">
+                <section>
+                <h2>Why</h2>
+                <p>Formula 1 is popular worldwide because it combines intense racing, advanced technology, and a rich history. With races held across different continents, it brings together fans from all backgrounds. The sport is exciting to watch, with legendary teams like Ferrari and Mercedes and drivers such as Lewis Hamilton and Ayrton Senna making it even more iconic. Beyond the races, F1 is all about strategy, innovation, and entertainment, especially with events like the Monaco Grand Prix and the Netflix series Drive to Survive, which have introduced the sport to a whole new audience.</p>
+                <p>Red Bull Racing is my favorite F1 team because they bring the perfect mix of speed, strategy, and personality to the sport. Their aggressive racing style and bold decisions, like unconventional pit strategies, make every race exciting to watch. Plus, Max Verstappen's dominance and fearless driving keep the team at the top, proving they're not just about energy drinks—they're about winning. The team's fun, rebellious vibe, combined with Adrian Newey's insane car designs, makes them stand out from the rest. Whether it's their incredible race pace or the way they troll other teams on social media, Red Bull just makes F1 more entertaining.</p>
+                </section>
+                <section>
+                <figure>
+                    <img src="images/why.jpg" alt="Pit stop"> 
+                    <figcaption>Pit stop for Redbull Racing Team</figcaption>
+                </figure>
+                </section>
+            </section>
+		</main>
+		<footer>	
+			<p>Page built by: <a href="itis3135/aulletfirm.com/">Aullet Firm ©2025</a></p>
+		</footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="scripts/main.js"></script> 
+    </body>
+</html>
