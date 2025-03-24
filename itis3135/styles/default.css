@@ -1,6 +1,6 @@
 body{
-    background-color: #E8F1F2;
-    color: #13293D;
+    background-color: #FDFBED;
+    color: #2B2D42;
     margin:0;
     padding:0;
     text-align:center;
@@ -13,19 +13,24 @@ main{
     margin:0 auto;
     max-width: 1200px;
     width:90%;
+    padding-bottom: 5vh;
 }
 h1,h2{
+    color: #2B2D42;
     text-align: center;
 }
+h3{
+    color: #576490;
+}
 .dark-link{
-    color: #13293D;
+    color: #2B2D42;
     text-decoration: none;
 }
 footer>p{	
     color:#E8F1F2;
 }
 footer{
-    background-color: #13293D;
+    background-color: #7796CB;
     color:#E8F1F2;
     padding:10px 0 10px 0;
     margin-top:auto;
@@ -41,7 +46,7 @@ nav {
 }
     
 header>nav  {
-background-color: #13293D;
+background-color: #7796CB;
 overflow: hidden;
 }
 
@@ -56,20 +61,17 @@ font-size: 17px;
 
 header>nav a:hover {
 background-color: #E8F1F2;
-color: #13293D;
+color: #2B2D42;
 }
 
-header>nav .active {
-background-color: #E8F1F2;
-color: #13293D;
-}
 header>nav:last-of-type{
-    background-color: #247ba0;
+    background-color: #A3BCF9;
     height: 5vh;
     padding:0;
 }
 header>nav:last-of-type>a{
     font-size: 12px;
+    color: #2B2D42;
 }
 
 p>a{
@@ -89,6 +91,20 @@ figure{
     text-align: center;
     font-style: italic;
 }
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-style: normal;
+}
+td{
+    padding: 0 5vw 0 5vw;
+}
+
+tr:nth-child(odd) {
+    background-color: #D1D2F9;
+}
+
 @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
     
     main {
