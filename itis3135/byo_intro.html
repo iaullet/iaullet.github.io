@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Aullet Blue Alpaca- ITIS3135 - BYO Intro</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>BYO Intro</h2>
+        <div class="form-area">
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page:</h3>
+        <form>
+            <fieldset>
+                <legend>Required Questions</legend>
+                <label for="full-name">Enter Your First and Last Name: <input id="full-name" name="full-name" type="text" value="" required /></label>
+                <label for="mascot">Enter Mascot: <input id="mascot" name="mascot" type="text" value="" required /></label>
+                <label for="personal-bg">Personal Background: <input id="personal-bg" name="personal-bg" type="text" value="" required /></label>
+                <label for="academic-bg">Academic Background: <input id="academic-bg" name="academic-bg" type="text" value="" required /></label>
+                <label for="software-bg">Programming/Software Background: <input id="software-bg" name="software-bg" type="text" value="" required /></label>
+                <label for="platform">Primary Computer Platform(s): <input id="platform" name="platform" type="text" value="" required /></label>
+                <label for="introimage">Upload Image: <input id="introimage" name="introimage" type="file" value="" required /></label>
+                <label for="imagecaption">Image Caption: <input id="imagecaption" name="imagecaption" type="text" value="" required /></label>
+            </fieldset>
+            <fieldset>
+                <legend >Courses (optional)</legend>
+                <button type="button" onclick="addCourse()">Add Course</button>
+                <section id="course-list"></section>
+                <div class="course-option" id="course-option">
+                    <label for="course-code">Code: <input id="course-code" name="course-code" type="text" value="" required /></label>
+                    <label for="course-title">Title: <input id="course-title" name="course-title" type="text" value="" required /></label>
+                    <label for="course-why">Why You Are Taking The Course: <input id="course-why" name="course-why" type="text" value="" required /></label>
+                    <button type="button" onclick="deleteCourse()" id="remove">Delete Course</button>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Optional Questions</legend>
+                <label for="funny">Funny Fact: <input id="funny" name="funny" type="text" value=""/></label>
+                <label for="extra">Anything Else: <input id="extra" name="extra" type="text" value=""  /></label>
+            </fieldset>
+            <label for="verification" class="inline"><input class="inline" id="verification" name="verification" type="checkbox" required>I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available</input></label>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+    <div id="intro">
+    </div>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/survey.js"></script>
+</body>
+</html>
