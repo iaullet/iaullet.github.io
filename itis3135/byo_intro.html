@@ -14,38 +14,53 @@
     <main>
         <h2>BYO Intro</h2>
         <div class="form-area">
-        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page:</h3>
-        <form>
+        <h3 class="center">Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+        <form id="form">
             <fieldset>
                 <legend>Required Questions</legend>
-                <label for="full-name">Enter Your First and Last Name: <input id="full-name" name="full-name" type="text" value="" required /></label>
-                <label for="mascot">Enter Mascot: <input id="mascot" name="mascot" type="text" value="" required /></label>
-                <label for="personal-bg">Personal Background: <input id="personal-bg" name="personal-bg" type="text" value="" required /></label>
-                <label for="academic-bg">Academic Background: <input id="academic-bg" name="academic-bg" type="text" value="" required /></label>
-                <label for="software-bg">Programming/Software Background: <input id="software-bg" name="software-bg" type="text" value="" required /></label>
-                <label for="platform">Primary Computer Platform(s): <input id="platform" name="platform" type="text" value="" required /></label>
-                <label for="introimage">Upload Image: <input id="introimage" name="introimage" type="file" value="" required /></label>
-                <label for="imagecaption">Image Caption: <input id="imagecaption" name="imagecaption" type="text" value="" required /></label>
+                <div class="name-info">
+                    <label for="first-name">First Name: <input id="first-name" name="first-name" type="text" placeholder="Bella" value="" class="inline" required /></label>
+                    <label for="last-name">Last Name: <input id="last-name" name="last-name" type="text" placeholder="Aullet" value="" class="inline" required /></label>
+                    <label for="mascot">Enter Mascot: <input id="mascot" name="mascot" type="text" placeholder="Blue Alpaca" value="" class="inline" required /></label>
+                </div>
+                <label for="introimage">Upload Image: <input id="introimage" name="introimage" type="file" required /></label>
+                <img src="images/introphoto.JPG" id="previewimage" alt="photo of me">
+                <div class="name-info">
+                    <label for="imagecaption">Image Caption: <input id="imagecaption" name="imagecaption" type="text" placeholder="Selfie in France" class="inline" value="" /></label>
+                    <label for="imagealt">Image Alt: <input id="imagealt" name="imagealt" type="text" placeholder="Introduction Photo" class="inline" value="" required /></label>
+                </div>
+                <label for="personal-bg" >Personal Background: <textarea id="personal-bg" name="personal-bg" class="background" placeholder="I was raised in Charlotte and transferred from CPCC a couple of years ago. " required></textarea></label>
+                <label for="academic-bg">Academic Background: <textarea id="academic-bg" name="academic-bg" class="background" placeholder="I received my GED before getting my associate's degree at CPCC and finally decided to pursue my bachelor's degree. I am now a senior majoring in MIS." required></textarea></label>
+                <label for="software-bg">Programming/Software Background: <textarea id="software-bg" name="software-bg" class="background" placeholder="I used to be a hair stylist before coming to UNCC."  required></textarea></label>
+                <label for="platform">Primary Computer Platform(s): <input id="platform" name="platform" placeholder="Windows, MacOS" required /></label>
             </fieldset>
             <fieldset>
                 <legend >Courses (optional)</legend>
-                <button type="button" onclick="addCourse()">Add Course</button>
-                <section id="course-list"></section>
+                <button type="button" onclick="addCourse()" id="add">Add Course</button>
+                <section id="course-list">
+                    <div class="course-option0" id="course-option0">
+                        <label for="course-code0">Code: <textarea id="course-code0" name="course-code0" placeholder="ITIS 3135" ></textarea></label>
+                        <label for="course-title0">Title: <textarea id="course-title0" name="course-title0" placeholder="Web-Application Design and Development" ></textarea></label>
+                        <label for="course-why0">Why You Are Taking The Course: <textarea id="course-why0" name="course-why0" placeholder="Required for my programming minor." ></textarea></label>
+                        <button type="button" onclick="addCourse()">Add Course</button>
+                        <button type="button" onclick="deleteCourse('course-option0')" id="remove">Delete Course</button>
+                    </div>
                 <div class="course-option" id="course-option">
-                    <label for="course-code">Code: <input id="course-code" name="course-code" type="text" value="" required /></label>
-                    <label for="course-title">Title: <input id="course-title" name="course-title" type="text" value="" required /></label>
-                    <label for="course-why">Why You Are Taking The Course: <input id="course-why" name="course-why" type="text" value="" required /></label>
-                    <button type="button" onclick="deleteCourse()" id="remove">Delete Course</button>
+                    <label for="course-code">Code: <textarea id="course-code" name="course-code" placeholder="ITIS 3135"></textarea></label>
+                    <label for="course-title">Title: <textarea id="course-title" name="course-title" placeholder="Web-Application Design and Development"></textarea></label>
+                    <label for="course-why">Why You Are Taking The Course: <textarea id="course-why" name="course-why" placeholder="Required for my programming minor."></textarea></label>
+                    <button type="button" onclick="addCourse()" >Add Course</button>
                 </div>
+            </section>
             </fieldset>
             <fieldset>
                 <legend>Optional Questions</legend>
                 <label for="funny">Funny Fact: <input id="funny" name="funny" type="text" value=""/></label>
                 <label for="extra">Anything Else: <input id="extra" name="extra" type="text" value=""  /></label>
             </fieldset>
-            <label for="verification" class="inline"><input class="inline" id="verification" name="verification" type="checkbox" required>I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available</input></label>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
+            <label for="verification"><input class="inline" id="verification" name="verification" type="checkbox" required>I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available</label>
+            <input type="submit" value="Submit" class="inline">
+            <input type="reset" value="Reset" class="inline">
         </form>
     </div>
     <div id="intro">
