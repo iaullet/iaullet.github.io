@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk IQ - Contact</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("s_QQOWxw-nmmL2Qn2");
+   })();
+</script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <section class="heading">
+        <img src="/itis3135/riskiq/images/riskiqhome.jpg" alt="logo">
+    <div class="box">
+        <h2>Contact Us</h2>
+        <p class="subhead">Let's talk risk—with intelligence.</p>
+    </div>
+    </section>
+    <main>
+        <section>
+            <p>Whether you're building a risk framework from the ground up or need support navigating complex regulatory challenges, Risk IQ Advisors LLC is here to help. We partner with financial institutions, tech startups, and growing businesses to develop smart, effective, and scalable risk solutions.</p>
+            <h4>Get in Touch</h4>
+            <p class="contact"><b>Location: </b>Charlotte, NC (Serving clients nationwide)</p>
+            <p class="contact"><b>Email: </b>marioaullet@riskiqadvisors.com</p>
+            <p class="contact"><b>Phone: </b>(123) 456-7890</p>
+            <p>Or fill out the contact form below and we'll respond within one business day.</p>
+        </section>
+        <form id="contact-form">
+            <input type="hidden" name="time" value="Mar 10 2025 08:46">
+            <label>Name</label>
+            <input type="text" name="name" id="name" required>
+            <label>Email</label>
+            <input type="email" name="email" id="email" required>
+            <label>Subject</label>
+            <input type="text" name="title" id="title" required>
+            <label>Message</label>
+            <textarea name="message" id="message" required></textarea>
+            <button type="button" class="submit" onclick="sendMail()">Send</button>
+        </form>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
