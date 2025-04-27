@@ -14,8 +14,11 @@ main{
     padding: 40px;
     line-height: 2;
 }
-h2{
-    color: #003366;
+
+h2 {
+  margin: 0;
+  font-size: 40px; 
+  color: #0077FF;
 }
 
 h3{
@@ -34,7 +37,9 @@ header {
 #logo {
     width: max(10rem, 18vw);
     aspect-ratio: 16/9;
-    padding: 0.4rem;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
   }
 
 .heading {
@@ -187,6 +192,7 @@ button{
     font-size: 25px;
     display: block;
     margin: 10px auto;
+    box-sizing:border-box;
 }
 
 .caption{
@@ -200,16 +206,9 @@ button{
     left: 0;
     background-color: rgba(51, 51, 51);
     color: #ffffff;
-    padding: 10px 20px;
-    padding-right: 30%;
     margin: 0;
-    height: 20%;
-  }
-  
-  .box h2 {
-    margin: 0;
-    font-size: 40px; 
-    color: #0077FF;
+    padding:0 40px;
+    box-sizing:border-box;
   }
   
   .box .subhead {
@@ -245,18 +244,18 @@ button{
 .submit{
   background-color: #0077FF;
     color: white;
-    padding: 12px;
     border-radius: 12px; 
     border: none;
     cursor: pointer;
+    box-sizing:border-box;
     width: 20%;
     font-size: 20px;
-    margin-top: 10px;
 }
 
 .options{
   width: 100%;
   padding: 20px;
+  box-sizing:border-box;
 }
 
 .dropdown{
@@ -281,6 +280,7 @@ button{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   cursor: pointer;
   transition: background-color 0.2s ease;
+  box-sizing:border-box;
 }
 
 .service:hover {
@@ -312,7 +312,7 @@ button{
   color: #1a1a1a;
   box-shadow: 4px 8px rgba(0, 0, 0, 0.05);
   transition: background-color 0.2s ease;
-}x
+}
 
 .dropdownContent a {
   color: #003366;
@@ -327,4 +327,91 @@ button{
 
 .show{
   display: block;
+}
+
+.container {
+    margin: 10px auto;
+    padding:0;
+    position: relative;
+    top: 50px;
+    box-sizing:border-box;
+}
+
+.mySlides {
+  display: none;
+  box-sizing: border-box;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  box-sizing: border-box;
+  right: 10%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  box-sizing: border-box;
+  background-color: rgba(119,150,203, 0.8);
+}
+
+.numbertext {
+  box-sizing: border-box;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #7796CB;
+  padding: 0 16px;
+  color: white;
+}
+
+.row:after {
+  box-sizing: border-box;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  box-sizing: border-box;
+  float: left;
+  width: 16.66%;
+}
+
+.demo {
+  box-sizing: border-box;
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  box-sizing: border-box;
+  opacity: 1;
 }
