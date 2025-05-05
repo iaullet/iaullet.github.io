@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Eagle - Home</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <img src="images/logoae.png" class="header-img">
+        <nav>
+            <ul>
+                <li id="home-btn">Home</li>
+                <li id="profile-btn">Profile</li>
+                <li id="register-btn">Register</li>
+                <li id="order-btn">Order</li>
+            </ul>
+        </nav>
+        <button id="cart-btn" type="button">
+            <span id="show-hide-cart">Show</span> Cart
+        </button>
+          <div id="cart-container">
+            <button class="btn" id="clear-cart-btn">Clear Cart</button>
+            <div id="products-container"></div>
+            <p>Total number of items: <span id="total-items">0</span></p>
+            <p>Subtotal: <span id="subtotal">$0</span></p>
+            <p>Taxes: <span id="taxes">$0</span></p>
+            <p>Total: <span id="total">$0</span></p>
+          </div>
+    </header>
+    <main>
+        <section class="section home">
+            <div class="categories">
+                <ul>
+                    <li>Women</li>
+                    <li>Men</li>
+                    <li>Footwear</li>
+                    <li>Accessories</li>
+                </ul>
+            </div>
+            <div class="best-seller">
+                <h2>Best Sellers</h2>
+                <div id="best-seller-container"></div>
+            </div>
+            <h2 class="center">Products</h2>
+            <div id="items-card-container"></div>
+        </section>
+        <section class="section profile">
+            <h2>Account Information</h2>
+            <p><b>Log In Details</b></p>
+            <p><b>Username: </b>user_one</p>
+            <p><b>Password: </b>********</p>
+            <button>Change Password</button>
+            <div class="line"></div>
+            <p><b>Primary Address</b><p>
+            <p><b>Street: </b>12345 Example Rd.</p>
+            <p><b>City: </b>City Name</p>
+            <p><b>State: </b>NC</p>
+            <p><b>Zip: </b>12345</p>
+            <button>Edit Primary Address</button>
+            <div class="line"></div>
+            <p><b>Primary Payment</b><p>
+            <p><b>Card Number: </b>1234 5678 9012 3456</p>
+            <p><b>Card Expiration: </b>mm/yy</p>
+            <p><b>CVV: </b>**</p>
+            <button>Edit Primary Payment</button>
+        </section>
+        <section class="section register">
+            <div class="row">    
+                <div class="col">
+                    <h2>Create an Account</h2>
+                    <form>
+                        <fieldset>
+                            <legend>Log In Information</legend>
+                            <label for="username">User Name: <input id="username" name="username" type="text" placeholder="first.last" value="" class="" required /></label>
+                            <label for="password">Password: <input id="password" name="password" type="text" placeholder="abc123" value="" class="" required /></label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Primary Address</legend>
+                            <label for="street">Street: <input id="street" name="street" type="text" placeholder="123 Example Rd." value="" class="" required /></label>
+                            <label for="city">City: <input id="city" name="city" type="text" placeholder="" value="" class="" required /></label>
+                            <div class="inline">
+                                <label for="state">State: <input id="state" name="state" type="text" placeholder="NC" value="" class="" required /></label>
+                                <label for="zip">Zip: <input id="zip" name="zip" type="text" placeholder="12345" value="" class="" required /></label>
+                            </div>
+                            </fieldset>
+                        <fieldset>
+                            <legend>Primary Payment</legend>
+                            <label for="card-number">Card Number: <input id="card-number" name="card-number" type="text" placeholder="1234 5678 9012 3456" value="" class="" required /></label>
+                            <div class="inline">
+                                <label for="card-exp">Expriation Date: <input id="card-exp" name="card-exp" type="text" placeholder="mm/yy" value="" class="" required /></label>
+                                <label for="card-cvv">Card CVV: <input id="card-cvv" name="card-cvv" type="text" placeholder="123" value="" class="" required /></label>
+                            </div>
+                        </fieldset>
+                        <input type="submit" value="Submit" class="inline">
+                    </form>
+                </div>
+                <div class="col">
+                    <form>
+                        <h2>Log In</h2>
+                        <fieldset>
+                            <label for="username">User Name: <input id="username" name="username" type="text" placeholder="first.last" value="" class="" required /></label>
+                            <label for="password">Password: <input id="password" name="password" type="text" placeholder="abc123" value="" class="" required /></label>
+                        </fieldset>
+                        <input type="submit" value="Submit" class="inline">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="section order">
+                <h2>Checkout</h2>
+            <div id="checkout" class="checkout">
+                    <button class="btn" id="clear-cart-btn-order">Clear Cart</button>
+                    <div id="products-container-order"></div>
+                    <p>Total number of items: <span id="total-items-order">0</span></p>
+                    <p>Subtotal: <span id="subtotal-order">$0</span></p>
+                    <p>Taxes: <span id="taxes-order">$0</span></p>
+                    <p>Total: <span id="total-order">$0</span></p>
+
+                    <div class="sections">
+                        <h3>Shipping Address</h3>
+                        <div class="radio-row inline">
+                          <input type="radio" id="primaryAddress" name="addressOption" value="primary" class="inline" checked>
+                          <label for="primaryAddress">Use Primary Address</label>
+                        </div>
+                        <div class="radio-row inline">
+                          <input type="radio" id="newAddress" name="addressOption" value="new" class="inline">
+                          <label for="newAddress">Use New Address</label>
+                        </div>
+                      
+                        <div id="newAddressFields" class="hidden">
+                          <input type="text" id="street" placeholder="Street"><br>
+                          <input type="text" id="city" placeholder="City"><br>
+                          <input type="text" id="state" placeholder="State"><br>
+                          <input type="text" id="zip" placeholder="ZIP Code"><br>
+                        </div>
+                      </div>
+                      <div class="line"></div>
+                      <div class="sections">
+                        <h3>Payment Method</h3>
+                        <div class="radio-row inline">
+                          <input type="radio" id="primaryPayment" name="paymentOption" value="primary" class="inline" checked>
+                          <label for="primaryPayment">Use Primary Payment Method</label>
+                        </div>
+                        <div class="radio-row inline">
+                          <input type="radio" id="newPayment" name="paymentOption" value="new" class="inline">
+                          <label for="newPayment">Add New Payment Method</label>
+                        </div>
+                      
+                        <div id="newPaymentFields" class="hidden">
+                          <input type="text" id="cardNumber" placeholder="Card Number"><br>
+                          <input type="text" id="expiration" placeholder="Expiration (MM/YY)"><br>
+                          <input type="text" id="cardName" placeholder="Name on Card"><br>
+                        </div>
+                      </div> 
+                <div class="sections">
+                    <button onclick="confirmOrder()">Confirm Order</button>
+                </div>
+            </div>
+            <div id="orderConfirmed" class="hidden">
+                <h2>Order Confirmed!</h2>
+                <p><strong>Shipping Address:</strong></p>
+                <p id="confirmedAddress"></p>
+                <p><strong>Payment Method:</strong></p>
+                <p id="confirmedPayment"></p>
+                <p><strong>Total:</strong> $<span id="confirmedTotal"></span></p>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
