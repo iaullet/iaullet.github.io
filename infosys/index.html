@@ -63,11 +63,11 @@
             <p><b>Primary Payment</b><p>
             <p><b>Card Number: </b>1234 5678 9012 3456</p>
             <p><b>Card Expiration: </b>mm/yy</p>
-            <p><b>CVV: </b>**</p>
+            <p><b>CVV: </b>***</p>
             <button>Edit Primary Payment</button>
         </section>
         <section class="section register">
-            <div class="row">    
+            <div class="row" id="row">    
                 <div class="col">
                     <h2>Create an Account</h2>
                     <form>
@@ -75,6 +75,7 @@
                             <legend>Log In Information</legend>
                             <label for="username">User Name: <input id="username" name="username" type="text" placeholder="first.last" value="" class="" required /></label>
                             <label for="password">Password: <input id="password" name="password" type="text" placeholder="abc123" value="" class="" required /></label>
+                            <label for="cpassword">Confirm Password: <input id="cpassword" name="password" type="text" placeholder="abc123" value="" class="" required /></label>
                         </fieldset>
                         <fieldset>
                             <legend>Primary Address</legend>
@@ -93,19 +94,31 @@
                                 <label for="card-cvv">Card CVV: <input id="card-cvv" name="card-cvv" type="text" placeholder="123" value="" class="" required /></label>
                             </div>
                         </fieldset>
-                        <input type="submit" value="Submit" class="inline">
+                        <input type="submit" value="Register" class="inline register">
                     </form>
                 </div>
                 <div class="col">
                     <form>
                         <h2>Log In</h2>
                         <fieldset>
-                            <label for="username">User Name: <input id="username" name="username" type="text" placeholder="first.last" value="" class="" required /></label>
-                            <label for="password">Password: <input id="password" name="password" type="text" placeholder="abc123" value="" class="" required /></label>
+                            <label for="logusername">User Name: <input id="logusername" name="logusername" type="text" placeholder="first.last" value="" class="" required /></label>
+                            <label for="logpassword">Password: <input id="logpassword" name="logpassword" type="text" placeholder="abc123" value="" class="" required /></label>
                         </fieldset>
-                        <input type="submit" value="Submit" class="inline">
+                        <input type="submit" value="Login" class="inline login">
                     </form>
                 </div>
+            </div>
+            <div id="confirmedAccount" class="hidden">
+                <h2>Account Created!</h2>
+                <p>Confirm the details below are correct. Make any necessary changes on your profile page!</p>
+                <p><strong>Username: </strong></p>
+                <p id="confirmUser"></p>
+                <p><strong>Primary Address: </strong></p>
+                <p id="confirmStreet"></p>
+                <p id="confirmAddress"></p>
+                <p><strong>Primary Payment Method:</strong></p>
+                <p id="confirmPayment"></p>
+                <button class="returnLog" id="returnLog" onclick="returnLog()">Log In</button>
             </div>
         </section>
         <section class="section order">

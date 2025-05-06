@@ -29,7 +29,7 @@ $(document).ready(() =>{
     let isCartShowing = false;
 
     const bestSeller = [
-        {id: 1, name: "Verstappen Graphic Tee", price: 45.99, category: "Tops", url: "https://s7d2.scene7.com/is/image/aeo/0161_4720_023_f?$plp-web-desktop$&fmt=webp"} ,
+        {id: 1, name: "Verstappen Tee", price: 45.99, category: "Tops", url: "https://s7d2.scene7.com/is/image/aeo/0161_4720_023_f?$plp-web-desktop$&fmt=webp"} ,
         { id: 2, name: "Women's Joggers", price: 34.99, category: "Bottoms", url: "https://s7d2.scene7.com/is/image/aeo/0322_5435_329_of?$pdp-m-opt$&fmt=webp" },
         { id: 3, name: "Women's Cardigan", price: 44.99, category: "Outerwear", url: "https://s7d2.scene7.com/is/image/aeo/2534_1455_106_of?$pdp-m-opt$&fmt=webp" },
         { id: 4, name: "Cargo Shorts", price: 27.99, category: "Bottoms", url: "https://s7d2.scene7.com/is/image/aeo/0132_7878_238_of?$plp-web-mobile$&fmt=webp" },
@@ -243,4 +243,73 @@ $(document).ready(() =>{
         document.getElementById("checkout").classList.add("hidden");
         document.getElementById("orderConfirmed").classList.remove("hidden");
         }
+
+        function returnLog() {
+            document.getElementById("row").classList.remove("hidden");
+            document.getElementById("confirmedAccount").classList.add("hidden");
+        }
+        let accountInfo = null;
+        document.querySelector('input[type="submit"].register').addEventListener('click', function (event) {
+            event.preventDefault(); 
+            let paymentText = "(Visa ending in 1234)";
+            let accountInfo = {
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value,
+                street: document.getElementById("street").value,
+                city: document.getElementById("city").value,
+                state: document.getElementById("state").value,
+                zip: document.getElementById("zip").value,
+                cardNum: document.getElementById("card-number").value,
+                expiration: document.getElementById("card-exp").value,
+                cardName: document.getElementById("card-cvv").value,
+                };
+
+                localStorage.setItem('user', JSON.stringify(accountInfo));
+
+                document.getElementById("confirmUser").textContent = `${accountInfo.username}`;
+                document.getElementById("confirmStreet").textContent = `${accountInfo.street}`;
+                document.getElementById("confirmAddress").textContent =`${accountInfo.city}, ${accountInfo.state} ${accountInfo.zip}`;
+    
+                document.getElementById("confirmPayment").textContent = paymentText;
+
+    
+            // Show the order confirmation section
+            document.getElementById("row").classList.add("hidden");
+            document.getElementById("confirmedAccount").classList.remove("hidden");
+        });
+
+        document.querySelector('input[type="submit"].login').addEventListener('click', function (event) {
+            event.preventDefault(); 
+            const loginUsername = document.getElementById("logusername").value;
+            const loginPassword = document.getElementById("logpassword").value;
+
+            const storedUser = JSON.parse(localStorage.getItem('user'));
+
+        if (storedUser && loginUsername === storedUser.username && loginPassword === storedUser.password) {
+            document.querySelector('.profile').innerHTML = `
+                <h2>Account Information</h2>
+                <p><b>Log In Details</b></p>
+                <p><b>Username:</b> ${storedUser.username}</p>
+                <p><b>Password: </b>********</p>
+                <button>Change Password</button>
+                <div class="line"></div>
+                <p><b>Primary Address</b><p>
+                <p><b>Street:</b> ${storedUser.street}</p>
+                <p><b>City:</b> ${storedUser.city}</p>
+                <p><b>State:</b> ${storedUser.state}</p>
+                <p><b>Zip:</b> ${storedUser.zip}</p>
+                <button>Edit Primary Address</button>
+                <div class="line"></div>
+                <p><b>Primary Payment</b><p>
+                <p><b>Card Number:</b> ${storedUser.cardNum}</p>
+                <p><b>Expiration:</b> ${storedUser.expiration}</p>
+                <p><b>CVV: </b>***</p>
+                <button>Edit Primary Payment</button>
+            `;
+            $('.register').hide();
+            $('.profile').show();
+        } else {
+            alert("Invalid username or password.");
+        }
+        });
     

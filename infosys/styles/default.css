@@ -6,7 +6,7 @@
   
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: white;
     color: #24272a;
 }
 
@@ -17,7 +17,7 @@ header{
 .header-img {
     width: 100%;
     object-fit:contain;
-    max-height: 30vh;
+    max-height: 25vh;
 }
 
 header nav{
@@ -47,10 +47,11 @@ nav li:hover {
 h2 {
     color: #101935;
     text-align: center;
+    padding-top: 30px;
 }
 
 main{
-    padding: 20px;
+    padding: 0px 100px 100px 100px;
     line-height: 1.4;
 }
 
@@ -116,7 +117,6 @@ input[type="submit"]{
     background-color: #101935;
     color: #f4f4f4;
     border-radius: 12px; 
-    border: 5px solid #f4f4f4;
     cursor: pointer;
 }
 
@@ -149,7 +149,7 @@ form {
 #cart-container {
     display: none;
     position: fixed;
-    bottom: 35px;
+    bottom: 40px;
     right: 5px;
     background-color: #101935;
     color: #f4f4f4;
@@ -310,6 +310,7 @@ form .radio-row {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+    padding-bottom: 20px;
     width: 100vw;
 }
 
@@ -328,7 +329,7 @@ form .radio-row {
     height: 300px; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content:center;
     overflow: hidden;
   }
   
